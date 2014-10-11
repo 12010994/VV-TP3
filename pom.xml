@@ -289,6 +289,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.12</version>
                 <configuration>
+                    <skipTests>true</skipTests>
                     <forkMode>once</forkMode>
                     <argLine>-Xmx512m -Dfile.encoding=${project.build.sourceEncoding}</argLine>
                 </configuration>
@@ -683,9 +684,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.12</version>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.atlassian.maven.plugins</groupId>

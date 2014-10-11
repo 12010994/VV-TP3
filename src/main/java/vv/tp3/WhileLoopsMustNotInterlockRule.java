@@ -20,14 +20,17 @@ public class WhileLoopsMustNotInterlockRule extends AbstractJavaRule {
     }
 
     private boolean hasWhileStatement(Node node) {
-        for(int i=0; i< node.jjtGetNumChildren(); i++){
-            if (node.jjtGetChild(i) instanceof ASTWhileStatement) {
-                return true;
-            }
+//        for(int i=0; i< node.jjtGetNumChildren(); i++){
+//            if (node.jjtGetChild(i) instanceof ASTWhileStatement) {
+//                return true;
+//            }
+//        }
+        List<ASTWhileStatement> childrenOfType = node.findDescendantsOfType(ASTWhileStatement.class);
+        if (childrenOfType == null || childrenOfType.isEmpty()) {
+            return false;
         }
-        List<ASTWhileStatement> childrenOfType = node.findChildrenOfType(ASTWhileStatement.class);
-        if (childrenOfType != null) return true;
 
-        return false;
+        System.out.println("boucle imbriquée: "+childrenOfType.size());
+        return true;
     }
 }
