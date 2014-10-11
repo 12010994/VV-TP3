@@ -30,7 +30,6 @@ public class WhileLoopsMustNotInterlockRule extends AbstractJavaRule {
             return false;
         }
 
-        System.out.println("boucle imbriquée: "+childrenOfType.size());
         return true;
     }
 }

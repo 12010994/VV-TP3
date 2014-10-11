@@ -21,7 +21,7 @@ public class Test {
     }
 
     private static void testWhile(boolean b) {
-        while(b){
+        while(true){
             break;
         }
     }
