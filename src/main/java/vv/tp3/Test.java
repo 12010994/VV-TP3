@@ -3,9 +3,9 @@ package vv.tp3;
 public class Test {
 
     public static void main(final String[] args) {
-        testBoucleImbriquees();
+        //testBoucleImbriquees();
         testWhile(true);
-        testWhile(false);
+        //testWhile(false);
     }
 
     private static void testBoucleImbriquees() {

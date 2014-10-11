@@ -19,7 +19,7 @@ public class WhileTrueOrFalseLoopsMustBeForbidden extends AbstractJavaRule {
 
     private boolean hasTrueOrFalseExpression(Node nodeExpr) {
 
-        if (nodeExpr.jjtGetChild().)
+        System.out.println(nodeExpr.jjtGetChild(0).jjtGetChild(0).get);
         return false;
     }
 }
