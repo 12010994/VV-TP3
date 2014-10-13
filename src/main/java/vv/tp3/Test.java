@@ -6,19 +6,26 @@ public class Test {
 
     }
 
-    private static void testBoucleImbriquees(boolean a, boolean b, boolean c) {
-        while(a){
-            while(b){
-                while(c){
+//    private static void testBoucleImbriquees(boolean a, boolean b, boolean c) {
+//        while(a){
+//            while(b){
+//                while(true){
+//                    break;
+//                }
+//            }
+//        }
+//    }
+
+    private static int testWhile() {
+        while(true){
+            break;
+            while(true){
+                while(true){
+                    return false;
                 }
             }
         }
-    }
+        return 0;
 
-    private static void testWhile() {
-        while(true){
-        }
-        while(false){
-        }
     }
 }

@@ -13,23 +13,12 @@ public class WhileLoopsMustNotInterlockRule extends AbstractJavaRule {
         Node firstStmt;
         firstStmt = (Node)node.jjtGetChild(1);
         if (hasWhileStatement(firstStmt)) {
-            //ajout de la violation
             addViolation(data, node);
         }
         return super.visit(node,data);
     }
 
     private boolean hasWhileStatement(Node node) {
-//        for(int i=0; i< node.jjtGetNumChildren(); i++){
-//            if (node.jjtGetChild(i) instanceof ASTWhileStatement) {
-//                return true;
-//            }
-//        }
-        List<ASTWhileStatement> childrenOfType = node.findDescendantsOfType(ASTWhileStatement.class);
-        if (childrenOfType == null || childrenOfType.isEmpty()) {
-            return false;
-        }
-
-        return true;
+        return node.hasDescendantOfType(ASTWhileStatement.class);
     }
 }
